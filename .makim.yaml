@@ -55,6 +55,17 @@ groups:
         run: |
           python migrate_json_to_db.py
 
+  research-poc:
+    tasks:
+      backend:
+        help: Run the research-poc backend (FastAPI) on port 8001
+        dir: src/research-poc/backend
+        run: uvicorn app.main:app --reload --port 8001
+      frontend:
+        help: Run the research-poc frontend (React/Vite)
+        dir: src/research-poc/frontend
+        run: npm run dev
+
   tests:
     tasks:
       linter:
