@@ -41,8 +41,6 @@ export default function Exams() {
 
 
   useEffect(() => {
-    isMountedRef.current = true;
-    
     const hasExistingData =
       state.formData.exams.suggestions.length > 0 ||
       state.formData.exams.selected.length > 0 ||

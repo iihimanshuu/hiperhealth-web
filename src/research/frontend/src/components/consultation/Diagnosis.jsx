@@ -41,8 +41,6 @@ export default function Diagnosis() {
   const isMountedRef = useRef(true);
 
   useEffect(() => {
-    isMountedRef.current = true;
-    
     const hasExistingData=
       state.formData.diagnosis.suggestions.length>0 ||
       state.formData.diagnosis.selected.length>0 ||
